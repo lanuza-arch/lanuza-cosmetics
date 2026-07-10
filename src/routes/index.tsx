@@ -138,7 +138,7 @@ function Hero() {
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-6 top-24 h-px w-16 bg-brand-red/50 md:left-16" />
         <div className="absolute right-6 top-24 text-[10px] uppercase tracking-[0.35em] text-white/50 md:right-16">
-          Est. MMXXV
+          Est. MMXXI
         </div>
         <div className="absolute bottom-10 left-6 text-[10px] uppercase tracking-[0.35em] text-white/40 md:left-16">
           Scroll
@@ -291,19 +291,19 @@ function Portfolio() {
                 </p>
                 <h3 className="mt-4 font-serif text-4xl leading-none text-brand-red md:text-6xl">
                   Va Va Vroom
-                  <sup className="ml-1 align-super text-base md:text-xl">™</sup>
+                  <sup className="ml-1 align-super text-base md:text-xl">®</sup>
                 </h3>
                 <div className="mt-6 h-px w-10 bg-brand-red/80" />
               </div>
 
               <div className="md:col-span-7">
                 <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
-                  VA VA VROOM™ combines practical formulations with functional
+                  VA VA VROOM® combines practical formulations with functional
                   packaging to deliver everyday beauty solutions designed for
                   modern routines.
                 </p>
                 <p className="mt-4 text-sm italic text-muted-foreground">
-                  Featuring Melt-Free Mess-Free<sup className="align-super">™</sup>{" "}
+                  Featuring Melt-Free Mess-Free<sup className="align-super">®</sup>{" "}
                   technology.
                 </p>
 
@@ -540,31 +540,15 @@ function Footer() {
     <footer className="border-t border-white/10 bg-[#0A0A0A] py-10 text-white/60">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 text-xs md:grid-cols-3 md:items-center md:px-10 lg:px-16">
         <p className="tracking-wide">
-          © 2025 Lanuza Cosmetics LLC. All rights reserved.
+          © 2026 Lanuza Cosmetics LLC. All rights reserved.
         </p>
 
-        <ul className="flex gap-6 md:justify-center">
-          <li>
-            <a
-              href="#"
-              className="uppercase tracking-[0.2em] transition-colors hover:text-white"
-            >
-              Privacy Policy
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="uppercase tracking-[0.2em] transition-colors hover:text-white"
-            >
-              Terms &amp; Conditions
-            </a>
-          </li>
-        </ul>
+        
+
 
         <p className="text-[11px] leading-relaxed md:text-right">
-          Va Va Vroom<sup className="align-super">™</sup> and Melt-Free Mess-Free
-          <sup className="align-super">™</sup> are trademarks of Lanuza Cosmetics
+          Va Va Vroom<sup className="align-super">®</sup> and Melt-Free Mess-Free
+          <sup className="align-super">®</sup> are trademarks of Lanuza Cosmetics
           LLC.
         </p>
       </div>
