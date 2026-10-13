@@ -5,30 +5,19 @@ import { toast } from "sonner";
 import { submitCorporateLead } from "@/lib/leads.functions";
 import {
   FlaskIcon,
-  GearIcon,
   HandshakeIcon,
   LayersIcon,
-  LightbulbIcon,
 } from "@/components/lanuza/icons";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Lanuza Cosmetics — Premium Beauty Brand Development" },
-      {
-        name: "description",
-        content:
-          "Lanuza Cosmetics develops advanced cosmetic products and precision makeup tools, including the flagship brand Va Va Vroom™.",
-      },
-      {
-        property: "og:title",
-        content: "Lanuza Cosmetics — Premium Beauty Brand Development",
-      },
-      {
-        property: "og:description",
-        content:
-          "Beauty innovation, advanced product development and functional packaging design for the modern beauty industry.",
-      },
+      { title: "Lanuza Cosmetics — Owner of VA VA VROOM®" },
+      { name: "description", content: "Lanuza Cosmetics LLC develops innovative cosmetic products and precision makeup tools for its proprietary brand, VA VA VROOM®." },
+      { property: "og:title", content: "Lanuza Cosmetics — Owner of VA VA VROOM®" },
+      { property: "og:description", content: "Lanuza Cosmetics LLC develops innovative cosmetic products and precision makeup tools for its proprietary brand, VA VA VROOM®." },
+      { name: "twitter:title", content: "Lanuza Cosmetics — Owner of VA VA VROOM®" },
+      { name: "twitter:description", content: "Lanuza Cosmetics LLC develops innovative cosmetic products and precision makeup tools for its proprietary brand, VA VA VROOM®." },
     ],
   }),
   component: LanuzaLanding,
@@ -44,7 +33,6 @@ function LanuzaLanding() {
       <Vision />
       <WhatWeDo />
       <Portfolio />
-      <Pillars />
       <ContactForm />
       <Footer />
     </main>
@@ -58,7 +46,7 @@ function NavBar() {
 
   const links = [
     { href: "#home", label: "Home" },
-    { href: "#portfolio", label: "Featured Brand" },
+    { href: "#portfolio", label: "Our Brand" },
     { href: "#contact", label: "Corporate Contact" },
   ];
 
@@ -160,7 +148,8 @@ function Hero() {
           Lanuza Cosmetics is a beauty innovation company specializing in
           advanced cosmetic products and precision makeup tools. By combining
           formulation expertise, functional packaging design, and precision
-          engineering, we create high-performance beauty solutions.
+          engineering, we create high-performance beauty solutions for our
+          proprietary brand, VA VA VROOM®.
         </p>
         <div className="mt-12">
           <a
@@ -201,24 +190,24 @@ function Vision() {
   );
 }
 
-/* ---------------------------- What We Do -------------------------- */
+/* ---------------------- Our Approach to Innovation ---------------- */
 
 function WhatWeDo() {
   const items = [
     {
-      icon: LightbulbIcon,
-      title: "Beauty Innovation",
-      body: "We identify real consumer needs and transform them into practical beauty solutions.",
-    },
-    {
       icon: FlaskIcon,
-      title: "Advanced Product Development",
-      body: "We combine cosmetic science, industrial design, and engineering to create differentiated products.",
+      title: "Product Innovation & Development",
+      body: "We identify real consumer needs and translate them into our own cosmetic products and precision makeup tools for VA VA VROOM®, combining product design, formulation expertise, and functional performance.",
     },
     {
       icon: LayersIcon,
       title: "Functional Packaging Design",
-      body: "We develop packaging that enhances the product experience through usability, precision, and convenience.",
+      body: "We integrate thoughtful packaging design and application functionality to create practical, differentiated beauty experiences.",
+    },
+    {
+      icon: HandshakeIcon,
+      title: "Manufacturing & Supplier Partnerships",
+      body: "We collaborate with external manufacturers, packaging suppliers, and formulation specialists to develop and produce VA VA VROOM® products.",
     },
   ];
 
@@ -227,10 +216,10 @@ function WhatWeDo() {
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="max-w-2xl">
           <p className="mb-4 text-[10px] uppercase tracking-[0.4em] text-brand-red">
-            03 — What We Do
+            03 — Our Approach
           </p>
           <h2 className="font-serif text-3xl leading-tight text-foreground md:text-5xl">
-            End-to-End Innovation
+            Our Approach to Innovation
           </h2>
           <div className="mt-6 h-px w-12 bg-brand-red/80" />
         </div>
@@ -270,27 +259,20 @@ function Portfolio() {
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
             <p className="mb-4 text-[10px] uppercase tracking-[0.4em] text-brand-red">
-              04 — Featured Brand
+              04 — Our Brand
             </p>
             <h2 className="font-serif text-3xl leading-tight text-foreground md:text-5xl">
-              Featured Brand
+              Our Brand
             </h2>
           </div>
-          <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-            A flagship beauty brand developed by Lanuza Cosmetics, focused on
-            making beauty easier, longer-lasting, and more convenient.
-          </p>
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-8">
           <article className="group relative overflow-hidden border border-border bg-[#F5F5F5] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_-30px_rgba(10,10,10,0.35)] md:p-14">
             <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16">
               <div className="md:col-span-5">
-                <p className="text-[10px] uppercase tracking-[0.35em] text-brand-red">
-                  Flagship Brand
-                </p>
-                <h3 className="mt-4 font-serif text-4xl leading-none text-brand-red md:text-6xl">
-                  Va Va Vroom
+                <h3 className="font-serif text-4xl leading-none text-brand-red md:text-6xl">
+                  VA VA VROOM
                   <sup className="ml-1 align-super text-base md:text-xl">®</sup>
                 </h3>
                 <div className="mt-6 h-px w-10 bg-brand-red/80" />
@@ -298,9 +280,11 @@ function Portfolio() {
 
               <div className="md:col-span-7">
                 <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
-                  VA VA VROOM® combines practical formulations with functional
-                  packaging to deliver everyday beauty solutions designed for
-                  modern routines.
+                  VA VA VROOM® is the proprietary beauty brand of Lanuza
+                  Cosmetics LLC. Designed for busy lifestyles and hot, humid
+                  climates, the brand combines practical formulations and
+                  functional packaging to make everyday beauty routines easier
+                  and more convenient.
                 </p>
                 <p className="mt-4 text-sm italic text-muted-foreground">
                   Featuring Melt-Free Mess-Free<sup className="align-super">®</sup>{" "}
@@ -330,66 +314,6 @@ function Portfolio() {
               </div>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------------------------- Pillars ----------------------------- */
-
-function Pillars() {
-  const items = [
-    {
-      icon: FlaskIcon,
-      title: "Cosmetic Innovation & Makeup Tools",
-      body: "Design and development of advanced beauty products and high-precision makeup tools, combining packaging engineering with superior performance.",
-    },
-    {
-      icon: GearIcon,
-      title: "Product Development",
-      body: "Expertise in product ideation, formulation development, packaging innovation, supplier collaboration, and bringing differentiated beauty products to market.",
-    },
-    {
-      icon: HandshakeIcon,
-      title: "Strategic Alliances",
-      body: "Collaboration with trusted manufacturers, packaging suppliers, formulation experts, and industry partners to develop beauty products with care and precision.",
-    },
-  ];
-
-  return (
-    <section className="bg-[#F5F5F5] py-24 md:py-36">
-      <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <div className="max-w-2xl">
-          <p className="mb-4 text-[10px] uppercase tracking-[0.4em] text-brand-red">
-            05 — Capabilities
-          </p>
-          <h2 className="font-serif text-3xl leading-tight text-foreground md:text-5xl">
-            Capabilities
-          </h2>
-          <div className="mt-6 h-px w-12 bg-brand-red/80" />
-        </div>
-
-        <div className="mt-16 grid grid-cols-1 gap-px bg-border md:mt-20 md:grid-cols-3">
-          {items.map(({ icon: Icon, title, body }, i) => (
-            <div
-              key={title}
-              className="group relative bg-background p-8 transition-colors duration-300 hover:bg-[#F5F5F5] md:p-10"
-            >
-              <div className="flex items-start justify-between">
-                <Icon className="text-foreground" />
-                <span className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-              </div>
-              <h3 className="mt-10 font-serif text-2xl leading-tight text-foreground md:text-[1.75rem]">
-                {title}
-              </h3>
-              <p className="mt-5 text-sm leading-relaxed text-muted-foreground md:text-base">
-                {body}
-              </p>
-            </div>
-          ))}
         </div>
       </div>
     </section>
@@ -439,7 +363,7 @@ function ContactForm() {
         <div className="grid grid-cols-1 gap-16 md:grid-cols-12">
           <div className="md:col-span-5">
             <p className="mb-4 text-[10px] uppercase tracking-[0.4em] text-brand-red">
-              06 — Contact
+              05 — Contact
             </p>
             <h2 className="font-serif text-3xl leading-tight md:text-5xl">
               Corporate
@@ -448,7 +372,10 @@ function ContactForm() {
             </h2>
             <div className="mt-6 h-px w-12 bg-brand-red/80" />
             <p className="mt-8 max-w-sm text-sm leading-relaxed text-white/60 md:text-base">
-              For inquiries from commercial partners, suppliers and distributors.
+              We welcome inquiries from manufacturers, packaging suppliers,
+              formulation specialists, and potential business partners
+              interested in collaborating with Lanuza Cosmetics on the
+              development of VA VA VROOM® products.
             </p>
           </div>
 
@@ -547,9 +474,9 @@ function Footer() {
 
 
         <p className="text-[11px] leading-relaxed md:text-right">
-          Va Va Vroom<sup className="align-super">®</sup> and Melt-Free Mess-Free
-          <sup className="align-super">®</sup> are trademarks of Lanuza Cosmetics
-          LLC.
+          VA VA VROOM<sup className="align-super">®</sup> and Melt-Free Mess-Free
+          <sup className="align-super">®</sup> are registered trademarks of
+          Lanuza Cosmetics LLC.
         </p>
       </div>
     </footer>

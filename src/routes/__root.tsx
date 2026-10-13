@@ -76,21 +76,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lanuza Cosmetics — Premium Beauty Brand Development" },
+      { title: "Lanuza Cosmetics — Owner of VA VA VROOM®" },
       {
         name: "description",
         content:
-          "Lanuza Cosmetics develops, manufactures and distributes premium beauty brands for the global market, backed by strategic alliances and international infrastructure.",
+          "Lanuza Cosmetics LLC develops innovative cosmetic products and precision makeup tools for its proprietary brand, VA VA VROOM®.",
       },
       { name: "author", content: "Lanuza Cosmetics" },
-      { property: "og:title", content: "Lanuza Cosmetics — Premium Beauty Brand Development" },
+      { property: "og:title", content: "Lanuza Cosmetics — Owner of VA VA VROOM®" },
       {
         property: "og:description",
         content:
-          "Cosmetic innovation, global distribution and strategic alliances for the international beauty industry.",
+          "Lanuza Cosmetics LLC develops innovative cosmetic products and precision makeup tools for its proprietary brand, VA VA VROOM®.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Lanuza Cosmetics — Owner of VA VA VROOM®" },
+      { name: "twitter:description", content: "Lanuza Cosmetics LLC develops innovative cosmetic products and precision makeup tools for its proprietary brand, VA VA VROOM®." },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
