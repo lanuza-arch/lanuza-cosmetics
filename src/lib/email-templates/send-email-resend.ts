@@ -11,9 +11,9 @@ import { TEMPLATES } from './registry'
 // Environment variables:
 //   RESEND_API_KEY  (required) API key created in the Resend dashboard.
 //   RESEND_FROM     (optional) From header. The domain must be verified in
-//                   Resend. Defaults to "Lanuza Cosmetics <noreply@lanuzacosmetics.com>".
+//                   Resend. Defaults to "Lanuza Cosmetics <noreply@mail.lanuzacosmetics.com>".
 
-const DEFAULT_FROM = 'Lanuza Cosmetics <noreply@lanuzacosmetics.com>'
+const DEFAULT_FROM = 'Lanuza Cosmetics <noreply@mail.lanuzacosmetics.com>'
 const RESEND_ENDPOINT = 'https://api.resend.com/emails'
 
 export interface SendResendEmailOptions {
