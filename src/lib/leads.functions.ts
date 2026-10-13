@@ -36,9 +36,10 @@ export const submitCorporateLead = createServerFn({ method: "POST" })
     }
 
     // Fire notification email (non-blocking for the user — log if it fails).
+    // Uses Resend when RESEND_API_KEY is set (Vercel hosting); otherwise falls
+    // back to Lovable's managed email API (Lovable hosting).
     try {
-      const { sendTemplateEmail } = await import("@/lib/email-templates/send-email");
-      await sendTemplateEmail("corporate-inquiry", "lanuza@lanuzacosmetics.com", {
+      const emailOptions = {
         templateData: {
           fullName: data.full_name,
           company: data.company,
@@ -47,7 +48,20 @@ export const submitCorporateLead = createServerFn({ method: "POST" })
         },
         replyTo: data.email,
         idempotencyKey: `corporate-inquiry-${data.email}-${Date.now()}`,
-      });
+      };
+      if (process.env.RESEND_API_KEY) {
+        const { sendTemplateEmailWithResend } = await import(
+          "@/lib/email-templates/send-email-resend"
+        );
+        await sendTemplateEmailWithResend(
+          "corporate-inquiry",
+          "lanuza@lanuzacosmetics.com",
+          emailOptions,
+        );
+      } else {
+        const { sendTemplateEmail } = await import("@/lib/email-templates/send-email");
+        await sendTemplateEmail("corporate-inquiry", "lanuza@lanuzacosmetics.com", emailOptions);
+      }
     } catch (emailError) {
       console.error("[corporate_leads] notification email failed:", emailError);
     }
